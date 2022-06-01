@@ -1,3 +1,5 @@
+// Simple password generator written in Rust.
+
 use rand::Rng;
 use rand::distributions::Slice;
 
@@ -7,7 +9,7 @@ let characters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M
 let characters_dist = Slice::new(&characters).unwrap();
 let rng = rand::thread_rng();
 
-    //Build a 16 character password
+    //Build a 16 character password.
 
 let characters_string: String = rng
     .sample_iter(&characters_dist)
